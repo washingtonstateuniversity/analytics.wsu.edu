@@ -1,16 +1,16 @@
-## analytics.usa.gov
+## analytics.wsu.edu
 
-A project to publish website analytics for the US federal government.
+A project to publish website analytics for Washington State University. This is a fork of the public domain [analytics.usa.gov project](https://github.com/18F/analytics.usa.gov).
 
 For a detailed description of how the site works, read [18F's blog post on analytics.usa.gov](https://18f.gsa.gov/2015/03/19/how-we-built-analytics-usa-gov/).
 
-Other government agencies who have reused this project for their analytics dashboard: 
+Other groups using this project for their analytics dashboards:
+* https://analytics.usa.gov/
 * http://analytics.phila.gov/
 * https://bouldercolorado.gov/stats
 * http://analytics.tdec.tn.gov/
   
 [This blog post details their implementations and lessons learned](https://18f.gsa.gov/2016/01/05/tips-for-adapting-analytics-usa-gov/).  
-
 
 ### Setup
 
