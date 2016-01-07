@@ -24,11 +24,6 @@ defaults:
     values:
       layout: default
 
-collections:
-  agencies:
-    output: true
-    permalink: /:path/
-
 # Site title and description
 title: "analytics.wsu.edu | Washington State University web traffic."
 description: ""
