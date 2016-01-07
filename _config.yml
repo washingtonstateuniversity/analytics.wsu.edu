@@ -29,25 +29,25 @@ collections:
     output: true
     permalink: /:path/
 
-# Site title and description 
-title: "analytics.usa.gov | The US government's web traffic."
-description: "Official data on web traffic to hundreds of US federal government websites. Published by the Digital Analytics Program."
+# Site title and description
+title: "analytics.wsu.edu | Washington State University web traffic."
+description: ""
 
 # Site's own URL
-url: https://analytics.usa.gov 
+url: https://analytics.wsu.edu
 
 # Default dropdown title, will not appear if there are no sub-pages
 dropdown_title: All Agencies 
 
 # Default data url
-data_url: https://analytics.usa.gov/data/live
+data_url: https://analytics.wsu.edu/data/live
 
 # GitHub information
-org_name: GSA
-repo_name: analytics.usa.gov
+org_name: washingtonstateuniversity
+repo_name: analytics.wsu.edu
 
 # twitter information
-twitter: usgsa
+twitter: wsupullman
 
 sass:
   sass_dir: sass
