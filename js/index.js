@@ -313,16 +313,7 @@
           .each(function(d) {
             d.text = this.innerText;
           })
-          .html("")
-          .append("a")
-            .attr("target", "_blank")
-            .attr("title", function(d) {
-              return d.page_title;
-            })
-            .attr("href", function(d) {
-              return exceptions[d.page] || ("http://" + d.page);
-            })
-            .text(function(d) {
+          .html("").text(function(d) {
               return title_exceptions[d.page] || d.page_title;
             });
       })
@@ -945,7 +936,7 @@
   }
 
 // Set the dropdown
-var dropDown = document.getElementById('agency-selector');
+/*var dropDown = document.getElementById('agency-selector');
 for (var i = 0; i < dropDown.options.length; i++) {
   if (dropDown.options[i].value === window.location.pathname){
     dropDown.selectedIndex = i;
@@ -956,5 +947,5 @@ for (var i = 0; i < dropDown.options.length; i++) {
 d3.select(dropDown).on("change", function () {
   window.location= d3.select(this).property('value');
 });
-
+*/
 })(this);

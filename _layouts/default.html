@@ -119,7 +119,7 @@
 
         <section class="section_headline visits_today">
           <h3>Visits Today</h3>
-          <h4>Eastern Time</h4>
+          <h4>Pacific Time</h4>
         </section>
         <section id="time_series"
           data-block="today"
@@ -281,17 +281,18 @@
           </figure>
 
         </section>
+
       </div>
 
       <section id="explanation">
 
         <h3>About this Site</h3>
         <p>
-          This data provides a window into how people are interacting with the University online. The data comes from a unified Google Analytics account for groups within Washington State University..
+          This data provides a window into how people are interacting with the University online. The data comes from a unified Google Analytics account for groups within Washington State University.
         </p>
 
         <p>
-          Not every University website is represented in this data. More information on how to see your data on this page will be available here soon.
+          Not every University website is represented in this data. To be sure your group's data appears, see the <a href="https://web.wsu.edu/2016/01/07/a-global-analytics-dashboard-for-wsu/">project overview</a> and detailed instructions for <a href="https://web.wsu.edu/2015/11/25/website-analytics-code-most-wsu-sites-need-updating-instructions-attached/">configuring WSU analytics</a>.
         </p>
 
         <p>
@@ -303,7 +304,7 @@
         </p>
 
         <p>
-          We plan to expand the data made available here. If you have any suggestions, or spot any issues or bugs, please <a href="https://github.com/washingtonstateuniversity/analytics.wsu.edu/issues" class="external-link">open an issue on GitHub</a> or contact <a href="https://web.wsu.edu"" class="external-link">Web Communication</a>.
+          We plan to expand the data made available here. If you have any suggestions, or spot any issues or bugs, please <a href="https://github.com/washingtonstateuniversity/analytics.wsu.edu/issues" class="external-link">open an issue on GitHub</a> or contact <a href="https://web.wsu.edu" class="external-link">Web Communication</a>.
         </p>
       </section>
 
@@ -357,6 +358,34 @@
 
 
     </div>
+
+    <script type='text/javascript'>
+      /* <![CDATA[ */
+      var wsu_analytics = {
+        "wsuglobal":{
+          "ga_code":"UA-55791317-1", // really you don't need this, but in a real off case this is where you would change for a global data bin
+          // look to https://github.com/washingtonstateuniversity/WSUWP-Plugin-Analytics/blob/master/wsu-analytics.php#L230
+          "campus":"none", // switch to `all` if there is location on more than one campus and this url represents them all
+          "college":"none",
+          "unit_type":"none",
+          "unit":"none",
+          "subunit":"none"
+        },
+        "app":{
+          "ga_code":"UA-69906812-11", // NOT YOUR SITE LEVEL GA CODE, use one of [Home Grown UA-69906812-4, Umbraco UA-69906812-1, UPCMS   UA-69906812-2;]
+          "is_editor":"false", // this would be set by the server side or some js logic, and always defaults to `false`
+          "events":[] // extend here or you can load your own events else where and do a $.merge(wsu_analytics.app.events,YOUR_CUSTOM_EVENTS_ARRAY)
+        },
+        "site":{
+          "ga_code":"UA-17815664-33", // YOUR SITE LEVEL GA CODE replace with what yours would be for the url it's under
+          "events":[]// extend here or you can load your own events else where and do a $.merge(wsu_analytics.site.events,YOUR_CUSTOM_EVENTS_ARRAY)
+        }
+      };
+      /* ]]> */
+    </script>
+    <script id="jquery" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script id="tracker_agent" src="https://repo.wsu.edu/jtrack/develop/bootstrap/bootstrap.min.js"></script>
+
   </body>
 
 
