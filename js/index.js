@@ -313,16 +313,7 @@
           .each(function(d) {
             d.text = this.innerText;
           })
-          .html("")
-          .append("a")
-            .attr("target", "_blank")
-            .attr("title", function(d) {
-              return d.page_title;
-            })
-            .attr("href", function(d) {
-              return exceptions[d.page] || ("http://" + d.page);
-            })
-            .text(function(d) {
+          .html("").text(function(d) {
               return title_exceptions[d.page] || d.page_title;
             });
       })
