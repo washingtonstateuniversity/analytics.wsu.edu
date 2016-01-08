@@ -357,6 +357,34 @@
 
 
     </div>
+
+    <script type='text/javascript'>
+      /* <![CDATA[ */
+      var wsu_analytics = {
+        "wsuglobal":{
+          "ga_code":"UA-55791317-1", // really you don't need this, but in a real off case this is where you would change for a global data bin
+          // look to https://github.com/washingtonstateuniversity/WSUWP-Plugin-Analytics/blob/master/wsu-analytics.php#L230
+          "campus":"none", // switch to `all` if there is location on more than one campus and this url represents them all
+          "college":"none",
+          "unit_type":"none",
+          "unit":"none",
+          "subunit":"none"
+        },
+        "app":{
+          "ga_code":"UA-69906812-11", // NOT YOUR SITE LEVEL GA CODE, use one of [Home Grown UA-69906812-4, Umbraco UA-69906812-1, UPCMS   UA-69906812-2;]
+          "is_editor":"false", // this would be set by the server side or some js logic, and always defaults to `false`
+          "events":[] // extend here or you can load your own events else where and do a $.merge(wsu_analytics.app.events,YOUR_CUSTOM_EVENTS_ARRAY)
+        },
+        "site":{
+          "ga_code":"UA-17815664-33", // YOUR SITE LEVEL GA CODE replace with what yours would be for the url it's under
+          "events":[]// extend here or you can load your own events else where and do a $.merge(wsu_analytics.site.events,YOUR_CUSTOM_EVENTS_ARRAY)
+        }
+      };
+      /* ]]> */
+    </script>
+    <script id="jquery" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script id="tracker_agent" src="https://repo.wsu.edu/jtrack/develop/bootstrap/bootstrap.min.js"></script>
+
   </body>
 
 
