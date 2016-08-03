@@ -28,12 +28,12 @@
           data-source="{{ data_url }}/realtime.json"
           data-refresh="15">
           <h2 id="current_visitors" class="data">...</h2>
-          <div class="chart_subtitle">people on {{ entity }} websites now</div>
+          <div class="chart_subtitle">people on WSU websites now</div>
         </section>
 
         <section class="section_headline visits_today">
           <h3>Visits Today</h3>
-          <h4>Eastern Time</h4>
+          <h4>Pacific Time</h4>
         </section>
         <section id="time_series"
           data-block="today"
@@ -159,7 +159,7 @@
             data-source="{{ data_url }}/top-pages-realtime.json"
             data-refresh="15">
             <h5><em>
-              People on a <strong>single, specific page</strong> now. {% if entity == "government" %}We only count pages with at least 10 people on the page.{% endif %}
+              People on a <strong>single, specific page</strong> now.
               <a href="{{ data_url }}/all-pages-realtime.csv">Download the full dataset.</a>
             </em></h5>
             <div class="data bar-chart">
@@ -178,7 +178,7 @@
             data-block="top-pages"
             data-source="{{ data_url }}/top-domains-30-days.json">
             <h5><em>
-              Visits over the last month to <strong>domains</strong>, including traffic to all pages within that domain. {% if entity == "government" %}We only count pages with at least 1,000 visits in the last month.{% endif %}
+              Visits over the last month to <strong>domains</strong>, including traffic to all pages within that domain.
               <a href="{{ data_url }}/top-domains-30-days.csv">Download the full dataset.</a>
             </em></h5>
             <div class="data bar-chart">
@@ -190,7 +190,7 @@
         <section id="top_downloads_table">
 
           <h3>Top Downloads</h3>
-          <h5><em>Total file downloads yesterday on {{ entity }} domains.</em></h5>
+          <h5><em>Total file downloads yesterday on WSU domains.</em></h5>
           <figure id="top-downloads"
             data-block="top-downloads"
             data-source="{{ data_url }}/top-downloads-yesterday.json">
@@ -199,4 +199,3 @@
           </figure>
 
         </section>
-

@@ -9,6 +9,7 @@
       {% endif %}
       <section class="width-two-thirds">
         <h1>Download the data</h1>
+        <!--
         {% assign agencies = site.agencies | sort:"name"  %}
         {% if agencies.size > 0 %}
         <div class="agency-selector-wrap">
@@ -23,7 +24,8 @@
           </form>
         </div>
         {% endif %}
-        <h2>Visits to and traffic sources for {% if entity == 'government' %}all participating agencies{% else %}{{ entity }}{% endif %}</h2>
+        -->
+        <h2>Visits to and traffic sources for all participating WSU sites</h2>
         <table class="usa-table-borderless downloads">
           <thead>
             <tr>
@@ -71,7 +73,7 @@
             </tr>
           </tbody>
         </table>
-        <h2>Visitor demographics for {% if entity == 'government' %}all participating agencies{% else %}{{ entity }}{% endif %}</h2>
+        <h2>Visitor demographics for all participating WSU sites</h2>
         <table class="usa-table-borderless downloads">
           <thead>
             <tr>
