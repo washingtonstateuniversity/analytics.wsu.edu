@@ -26,10 +26,10 @@ defaults:
 
 collections:
   agencies:
-    output: true
+    output: false
     permalink: /:path/
   data_pages:
-    output: true
+    output: false
     permalink: /:path/data/
 
 # Site title and description
