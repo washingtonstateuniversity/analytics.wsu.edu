@@ -24,6 +24,14 @@ defaults:
     values:
       layout: default
 
+collections:
+  agencies:
+    output: true
+    permalink: /:path/
+  data_pages:
+    output: true
+    permalink: /:path/data/
+
 # Site title and description
 title: "analytics.wsu.edu | Washington State University web traffic."
 description: ""
@@ -32,7 +40,7 @@ description: ""
 url: https://analytics.wsu.edu
 
 # Default dropdown title, will not appear if there are no sub-pages
-dropdown_title: All Agencies 
+dropdown_title: All Participating Websites
 
 # Default data url
 data_url: https://analytics.wsu.edu/data/live

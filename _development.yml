@@ -6,4 +6,4 @@ url: http://localhost:3000
 #   serve
 data_url: /fake-data
 
-data_source: /fake-data
+data_dir: /fake-data
