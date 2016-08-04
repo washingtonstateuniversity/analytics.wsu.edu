@@ -13,13 +13,13 @@ Other groups using this project for their analytics dashboards:
 * http://analytics.muni.org/
 * http://analytics.smgov.net/
 
-[This blog post details their implementations and lessons learned](https://18f.gsa.gov/2016/01/05/tips-for-adapting-analytics-usa-gov/).  
+[This blog post details the 18F's implementations and lessons learned](https://18f.gsa.gov/2016/01/05/tips-for-adapting-analytics-usa-gov/).  
 
 ### Setup
 
 Ths app uses [Jekyll](http://jekyllrb.com) to build the site, and [Sass](http://sass-lang.com/), [Bourbon](http://bourbon.io), and [Neat](http://neat.bourbon.io) for CSS.
 
-Install them all:
+Install them all using [bundler](http://bundler.io/):
 
 ```bash
 bundle install
@@ -27,34 +27,6 @@ bundle install
 
 [`analytics-reporter`](https://github.com/18F/analytics-reporter) is the code that powers the analytics dashboard.
 Please clone the `analytics-reporter` next to a local copy of this github repository.
-
-### Adding Additional Agencies
-0. Ensure that data is being collected for a specific agency's Google Analytics ID. Visit [18F's analytics-reporter](https://github.com/18F/analytics-reporter) for more information. Save the url path for the data collection path.
-0. Create a new html file in the `_agencies` directory. The name of the file will be the url path.
-
-  ```bash
-  touch _agencies/agencyx.html
-  ```
-0. Create a new html file in the `_data_pages` directory. Use the same name you used in step 2. This will be the data download page for this agency
-
-  ```bash
-  touch _data_pages/agencyx.html
-  ```
-0. Set the required data for for the new files. (Both files need this data.) example:
-
-  ```yaml
-  ---
-  name: Agency X # Name of the page
-  data_url: https://analytics.usa.gov/data/agencyx # Data URL from step 1
-  slug: agencyx # Same as the name of the html files. Used to generate data page links.
-  layout: default # type of layout used. available layouts are in `_layouts`
-  ---
-  ```
-0. Agency page: Below the data you just entered, include the page content you want. The `_agencies` page will use the `charts.html` partial and the `_data_pages` pages will use the `data_download.html` partial. example:
-
-```yaml
-{% include charts.html %}
-```
 
 ### Developing locally
 
@@ -64,20 +36,11 @@ Run Jekyll with development settings:
 make dev
 ```
 
-(This runs `bundle exec jekyll serve --watch --config=_config.yml,_development.yml`.)
-
-Sass can watch the .scss source files for changes, and build the .css files automatically:
-
-```bash
-make watch
-```
-
-To compile the Sass stylesheets once, run `make clean all`, or `make -B` to compile even if the .css file already exists.
+This runs `bundle exec jekyll serve --watch --config=_config.yml,_development.yml`, which will generate the final site output in `_site/`, start a local webserver at `http://127.0.0.1:4000`, and then regenerate `_site/` whenever files are modified.
 
 ### Developing with local data
 
 The development settings assume data is available at `/fakedata`. You can change this in `_development.yml`.
-
 
 ### Developing with real live data from `analytics-reporter`
 
@@ -104,30 +67,17 @@ serve --cors
 The data will be available at `http://localhost:3000` over CORS, with no path prefix. For example, device data will be at `http://localhost:3000/devices.json`.
 
 
-### Deploying to Staging (18F specific)
-Pushes to the 18f-pages branch are reflected in the staging environment https://pages.18f.gov/analytics.usa.gov/. All changes can be seen here prior to production release.
-
 ### Deploying the app to production
 
-In production, the site's base URL is set to `https://analytics.usa.gov` and the data's base URL is set to `https://analytics.usa.gov/data/live`.
+In production, the site's base URL is set to `https://analytics.wsu.edu` and the data's base URL is set to `https://analytics.wsu.edu/data/live`.
 
-To deploy this app to `analytics.usa.gov`, you will need authorized access to 18F's Amazon S3 bucket for the project.
+To deploy this app to `analytics.wsu.edu`, you will need authorized access to the [Web Communication](https://web.wsu.edu) WSUWP Indie server.
 
-To deploy the site using `s3cmd`, production settings, and a **5 minute cache time**, run:
+To deploy the site once you have access, run:
 
 ```bash
 make deploy
 ```
-
-**Use the full command above.** The full command ensures that the build completes successfully, with production settings, _before_ triggering an upload to the production bucket.
-
-
-### Environments
-
-| Environment | Branch | URL |
-|-------------| ------ | --- |
-| Staging | 18f-pages  | https://pages.18f.gov/analytics.usa.gov/  |
-| Production | 18f-pages | https://www.analytics.usa.gov  |
 
 ### Public domain
 
