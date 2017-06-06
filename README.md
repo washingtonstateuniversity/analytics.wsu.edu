@@ -22,7 +22,7 @@ Ths app uses [Jekyll](http://jekyllrb.com) to build the site, and [Sass](http://
 Install them all using [bundler](http://bundler.io/):
 
 ```bash
-bundle install
+bundle install --path vendor/bundle
 ```
 
 [`analytics-reporter`](https://github.com/18F/analytics-reporter) is the code that powers the analytics dashboard.
