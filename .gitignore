@@ -13,3 +13,5 @@ _site
 /*.gz
 /*.map
 /work
+.bundle
+vendor

@@ -24,17 +24,9 @@ defaults:
     values:
       layout: default
 
-collections:
-  agencies:
-    output: false
-    permalink: /:path/
-  data_pages:
-    output: false
-    permalink: /:path/data/
-
 # Site title and description
-title: "analytics.wsu.edu | Washington State University web traffic."
-description: ""
+title: "Web Analytics | Washington State University"
+description: "Displays real time web traffic at WSU and provides insight into the technology used by WSU visitors over the last 90 days."
 
 # Site's own URL
 url: https://analytics.wsu.edu
