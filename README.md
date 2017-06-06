@@ -63,13 +63,15 @@ The data will be available at `http://localhost:3000` over CORS, with no path pr
 
 In production, the site's base URL is set to `https://analytics.wsu.edu` and the data's base URL is set to `https://analytics.wsu.edu/data/live`.
 
-To deploy this app to `analytics.wsu.edu`, you will need authorized access to the [Web Communication](https://web.wsu.edu) WSUWP Indie server.
+To deploy this app to `analytics.wsu.edu`, you will need authorized access to the [Web Communication](https://web.wsu.edu) WSUWP Indie server. Your SSH configuration should use the `wsuwp-indie-prod-01` server alias and a key should be configured for the `www-deploy` user.
 
 To deploy the site once you have access, run:
 
 ```bash
 make deploy
 ```
+
+Please tag any releases on the `wsu-production` branch to track deployments.
 
 ## Public domain
 
