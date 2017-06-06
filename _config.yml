@@ -25,7 +25,7 @@ defaults:
       layout: default
 
 # Site title and description
-title: "analytics.wsu.edu | Washington State University web traffic."
+title: "Web Analytics | Washington State University"
 description: ""
 
 # Site's own URL
